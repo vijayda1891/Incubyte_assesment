@@ -39,9 +39,15 @@ describe StringCalculator do
         #     end
         # end
 
-        context "given string with number greater than thousand" do
-            it "Should ignore numbers greater than thousand and return the sum of numbers" do
-                expect(StringCalculator.add("//;\n1;1223,2")).to eq(3)
+        # context "given string with number greater than thousand" do
+        #     it "Should ignore numbers greater than thousand and return the sum of numbers" do
+        #         expect(StringCalculator.add("//;\n1;1223,2")).to eq(3)
+        #     end 
+        # end
+
+        context "given string with multiple types of delimiters" do
+            it "should return the sum of the numbers in the string" do
+                expect(StringCalculator.add("//[*][%]\n1*2%3")).to eq(6)
             end 
         end
     end

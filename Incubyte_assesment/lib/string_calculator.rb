@@ -48,33 +48,54 @@ class StringCalculator
         # result
 
         #step 5 
-        result = 0
-        negative_numbers = []
-        if sample_string.length == 0
-            result
-        else
-            x = sample_string.split(/[,|\n|;|:|\s]/).map(&:to_i)
-            x.each do |i|
-                if i >= 0 
-                    result += i
-                else 
-                    negative_numbers << i
-                end
-            end
-        end
-        if negative_numbers.length > 0
-            raise "negative numbers not allowed #{negative_numbers.join(",")}"
-        else
-            result
-        end
+        # result = 0
+        # negative_numbers = []
+        # if sample_string.length == 0
+        #     result
+        # else
+        #     x = sample_string.split(/[,|\n|;|:|\s]/).map(&:to_i)
+        #     x.each do |i|
+        #         if i >= 0 
+        #             result += i
+        #         else 
+        #             negative_numbers << i
+        #         end
+        #     end
+        # end
+        # if negative_numbers.length > 0
+        #     raise "negative numbers not allowed #{negative_numbers.join(",")}"
+        # else
+        #     result
+        # end
 
         #step 6
+        # result = 0
+        # negative_numbers = []
+        # if sample_string.length == 0
+        #     result
+        # else
+        #     x = sample_string.split(/[,|\n|;|:|\s]/).map(&:to_i)
+        #     x.each do |i|
+        #         if i >= 0 
+        #             result += i unless i > 1000
+        #         else 
+        #             negative_numbers << i
+        #         end
+        #     end
+        # end
+        # if negative_numbers.length > 0
+        #     raise "negative numbers not allowed #{negative_numbers.join(",")}"
+        # else
+        #     result
+        # end
+
+        #step 7
         result = 0
         negative_numbers = []
         if sample_string.length == 0
             result
         else
-            x = sample_string.split(/[,|\n|;|:|\s]/).map(&:to_i)
+            x = sample_string.split(/[,|\n|;|:|\s|*|%|@|#|&|!]/).map(&:to_i)
             x.each do |i|
                 if i >= 0 
                     result += i unless i > 1000
