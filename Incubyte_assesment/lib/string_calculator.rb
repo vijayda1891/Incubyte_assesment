@@ -1,11 +1,26 @@
 class StringCalculator
 
     def self.add(sample_string)
-        if sample_string.length == 0
-            0
-        else
-            sample_string.to_i
-        end
-    end
+        #step 1 part a 
+        # 0
 
+        #step 1 part b
+        # if sample_string.length == 0
+        #     0
+        # else
+        #     sample_string.to_i
+        # end
+
+        #step 1 part c
+        result = 0
+        if sample_string.length == 0
+            result
+        else
+            x = sample_string.split(",").map(&:to_i)
+            x.each do |i|
+                result += i
+            end
+        end
+        result
+    end
 end

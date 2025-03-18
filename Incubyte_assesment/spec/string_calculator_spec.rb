@@ -9,10 +9,16 @@ describe StringCalculator do
         #     end
         # end 
 
-        context "given string with single character" do
-            it "should return the character" do 
-                expect(StringCalculator.add("4")).to eq(4)
-            end 
+        # context "given string with single character" do
+        #     it "should return the character" do 
+        #         expect(StringCalculator.add("4")).to eq(4)
+        #     end 
+        # end
+
+        context "given string with multiple characters" do
+            it "should return the sum of the characters" do 
+                expect(StringCalculator.add("1,5")).to eq(6)
+            end
         end
     end
 
