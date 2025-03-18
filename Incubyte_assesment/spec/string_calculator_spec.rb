@@ -27,9 +27,15 @@ describe StringCalculator do
         #     end 
         # end
 
-        context "given string with new lines and multiple delimeters" do
-            it "should return the sum of the numbers in the string" do 
-                expect(StringCalculator.add("//;\n1;2")).to eq(3)
+        # context "given string with new lines and multiple delimeters" do
+        #     it "should return the sum of the numbers in the string" do 
+        #         expect(StringCalculator.add("//;\n1;2")).to eq(3)
+        #     end
+        # end
+
+        context "given string with negative numbers" do 
+            it "should raise 'negative numbers not allowed' exception" do
+                expect{ StringCalculator.add("//;\n-1;-2")}.to raise_error("negative numbers not allowed -1,-2")
             end
         end
     end

@@ -36,17 +36,36 @@ class StringCalculator
         # result
 
         #step 4
+        # result = 0
+        # if sample_string.length == 0
+        #     result
+        # else
+        #     x = sample_string.split(/[,|\n|;|:|\s]/).map(&:to_i)
+        #     x.each do |i|
+        #         result += i
+        #     end
+        # end
+        # result
+
+        #step 5 
         result = 0
+        negative_numbers = []
         if sample_string.length == 0
             result
         else
-            x = sample_string.split(/[,|\n|;|:|\s]/).map(&:to_i)
+            x = sample_string.split(/[,|\n|;]/).map(&:to_i)
             x.each do |i|
-                result += i
+                if i >= 0 
+                    result += i
+                else 
+                    negative_numbers << i
+                end
             end
         end
-        result
-
-
+        if negative_numbers.length > 0
+            raise "negative numbers not allowed #{negative_numbers.join(",")}"
+        else
+            result
+        end
     end
 end
