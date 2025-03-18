@@ -21,10 +21,16 @@ describe StringCalculator do
         #     end
         # end
 
-        context "given string with new lines and commas" do
+        # context "given string with new lines and commas" do
+        #     it "should return the sum of the numbers in the string" do 
+        #         expect(StringCalculator.add("1\n2,3")).to eq(6)
+        #     end 
+        # end
+
+        context "given string with new lines and multiple delimeters" do
             it "should return the sum of the numbers in the string" do 
-                expect(StringCalculator.add("1\n2,3")).to eq(6)
-            end 
+                expect(StringCalculator.add("//;\n1;2")).to eq(3)
+            end
         end
     end
 
