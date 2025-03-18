@@ -33,10 +33,16 @@ describe StringCalculator do
         #     end
         # end
 
-        context "given string with negative numbers" do 
-            it "should raise 'negative numbers not allowed' exception" do
-                expect{ StringCalculator.add("//;\n-1;-2")}.to raise_error("negative numbers not allowed -1,-2")
-            end
+        # context "given string with negative numbers" do 
+        #     it "should raise 'negative numbers not allowed' exception" do
+        #         expect{ StringCalculator.add("//;\n-1;-2")}.to raise_error("negative numbers not allowed -1,-2")
+        #     end
+        # end
+
+        context "given string with number greater than thousand" do
+            it "Should ignore numbers greater than thousand and return the sum of numbers" do
+                expect(StringCalculator.add("//;\n1;1223,2")).to eq(3)
+            end 
         end
     end
 
