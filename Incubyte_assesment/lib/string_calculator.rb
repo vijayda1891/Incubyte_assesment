@@ -95,7 +95,7 @@ class StringCalculator
         if sample_string.length == 0
             result
         else
-            x = sample_string.split(/[,|\n|;|:|\s|*|%|@|#|&|!]/).map(&:to_i)
+            x = sample_string.split(/[,\n;:\s*%@#&!]+/).map(&:to_i)
             x.each do |i|
                 if i >= 0 
                     result += i unless i > 1000
